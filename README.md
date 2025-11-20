@@ -36,4 +36,4 @@ dependencies {
 
 ## Ad Network Sdk options
 ### advertising-multi-sdk
-`advertising-multi-sdk:3.+'` with ad network support `AdMob, Ad Manager, Meta Audience Network, AppLovin Max, AppLovin Discovery, Wortise, Start.io, Unity Ads, wortise`
+`advertising-multi-sdk:2.+'` with ad network support `AdMob, Ad Manager, Meta Audience Network, AppLovin Max, AppLovin Discovery, Wortise, Start.io, Unity Ads, wortise`
