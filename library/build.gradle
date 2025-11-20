@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.kadadevelopers.ads'
+    compileSdk 36
+    defaultConfig {
+        minSdk 23
+        targetSdk 36
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    lintOptions {
+//        disable 'MobileAdsSdkOutdatedVersion'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'com.google.android.gms:play-services-appset:16.1.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.2.0'
+    implementation 'com.google.android.gms:play-services-basement:18.9.0'
+
+    //Primary Ad Networks
+    implementation 'com.google.android.gms:play-services-ads:24.7.0'
+    implementation 'com.startapp:inapp-sdk:5.2.4'
+    implementation 'com.applovin:applovin-sdk:13.5.1'
+    implementation 'com.unity3d.ads:unity-ads:4.16.4'
+    implementation 'com.unity3d.ads-mediation:mediation-sdk:9.1.0'
+    implementation 'com.unity3d.ads-mediation:adquality-sdk:9.1.1'
+    implementation 'com.facebook.android:audience-network-sdk:6.21.0'
+    implementation("com.wortise:android-sdk:1.7.2")
+
+    //AdMob mediation
+    implementation 'com.google.ads.mediation:applovin:13.5.1.0'
+    implementation 'com.google.ads.mediation:unity:4.16.4.0'
+    implementation 'com.google.ads.mediation:facebook:6.21.0.0'
+
+    //Applovin mediation
+    implementation 'com.applovin.mediation:google-ad-manager-adapter:24.7.0.0'
+    implementation 'com.applovin.mediation:google-adapter:24.7.0.0'
+    implementation 'com.applovin.mediation:unityads-adapter:4.16.4.0'
+    implementation 'com.applovin.mediation:ironsource-adapter:9.1.0.0.0'
+    implementation 'com.applovin.mediation:facebook-adapter:6.21.0.0'
+
+    //ironSource mediation
+    implementation 'com.unity3d.ads-mediation:applovin-adapter:5.2.0'
+    implementation 'com.unity3d.ads-mediation:admob-adapter:5.2.0'
+    implementation 'com.unity3d.ads-mediation:facebook-adapter:5.1.0'
+    implementation 'com.unity3d.ads-mediation:unityads-adapter:5.3.0'
+
+    //GDPR
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:5.0.5'
+    annotationProcessor 'com.github.bumptech.glide:compiler:5.0.5'
+
+    //Rest API
+    implementation 'com.squareup.retrofit2:converter-gson:3.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:3.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.3.2'
+    implementation 'com.squareup.okhttp3:okhttp:5.3.2'
+}
